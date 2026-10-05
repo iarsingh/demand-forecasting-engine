@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demand-forecasting-engine
+  labels:
+    app: demand-forecasting-engine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demand-forecasting-engine
+  template:
+    metadata:
+      labels:
+        app: demand-forecasting-engine
+    spec:
+      containers:
+        - name: api
+          image: demand-forecasting-engine:local
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /v1/readyz
+              port: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demand-forecasting-engine
+spec:
+  selector:
+    app: demand-forecasting-engine
+  ports:
+    - port: 80
+      targetPort: 8080
