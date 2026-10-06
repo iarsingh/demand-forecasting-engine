@@ -52,14 +52,14 @@ These checked-in guides provide the project’s detailed design, operational con
 | --- | --- | --- |
 | `GET /healthz` | `healthz` | [`src/demand/main.py`](src/demand/main.py#L10) |
 | `POST /forecast` | `post_forecast` | [`src/demand/main.py`](src/demand/main.py#L15) |
-| `GET /readyz` | `readyz` | [`src/demand/ops.py`](src/demand/ops.py#L44) |
-| `POST /workspaces` | `create_workspace` | [`src/demand/ops.py`](src/demand/ops.py#L49) |
-| `GET /workspaces` | `list_workspaces` | [`src/demand/ops.py`](src/demand/ops.py#L66) |
-| `POST /workspaces/{workspace_id}/jobs` | `create_job` | [`src/demand/ops.py`](src/demand/ops.py#L73) |
-| `GET /jobs/{job_id}` | `get_job` | [`src/demand/ops.py`](src/demand/ops.py#L96) |
-| `POST /jobs/{job_id}/approve` | `approve_job` | [`src/demand/ops.py`](src/demand/ops.py#L105) |
-| `GET /audit` | `audit` | [`src/demand/ops.py`](src/demand/ops.py#L122) |
-| `GET /metrics` | `metrics` | [`src/demand/ops.py`](src/demand/ops.py#L138) |
+| `GET /readyz` | `readyz` | [`src/demand/ops.py`](src/demand/ops.py#L74) |
+| `POST /workspaces` | `create_workspace` | [`src/demand/ops.py`](src/demand/ops.py#L80) |
+| `GET /workspaces` | `list_workspaces` | [`src/demand/ops.py`](src/demand/ops.py#L98) |
+| `POST /workspaces/{workspace_id}/jobs` | `create_job` | [`src/demand/ops.py`](src/demand/ops.py#L106) |
+| `GET /jobs/{job_id}` | `get_job` | [`src/demand/ops.py`](src/demand/ops.py#L130) |
+| `POST /jobs/{job_id}/approve` | `approve_job` | [`src/demand/ops.py`](src/demand/ops.py#L140) |
+| `GET /audit` | `audit` | [`src/demand/ops.py`](src/demand/ops.py#L160) |
+| `GET /metrics` | `metrics` | [`src/demand/ops.py`](src/demand/ops.py#L176) |
 
 The table lists literal route decorators found in the inspected Python modules. Router prefixes and middleware can add behavior; check the linked handler and application setup before calling an endpoint.
 
